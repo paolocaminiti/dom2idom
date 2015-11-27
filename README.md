@@ -1,2 +1,7 @@
 # dom2idom
-DOM fragment or HTML string to Incremental DOM instructions runtime interpreter
+
+##### DISCLAIMER
+
+
+##### live demos
+[circles](http://paolocaminiti.github.io/dom2idom/demo/circles/), benchmark to get a measure inefficiency
