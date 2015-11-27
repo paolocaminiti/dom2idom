@@ -5,7 +5,7 @@ This came out of curiosity, it's a very inefficient way to use IncrementalDOM, a
 
 In old existing codebases that you need to put your hands on, it may help you take advantage of in place mutations and refactor things in a bit more declarative style without modifing your UI DOM generation. For such codebases it comes as a relatively lightweight dependecy (IncrementalDOM is < 10Kb).
 
-##### live demos
+##### Live demos
 [circles](http://paolocaminiti.github.io/dom2idom/demo/circles/), benchmark to get a measure of inefficiency
 
 ##### Usage
