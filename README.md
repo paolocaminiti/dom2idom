@@ -15,7 +15,7 @@ function patch(target, frag) {
 	IncrementalDOM.patch(target, dom2idom, frag)
 }
 
-// If you leave in JQuery chains
+// If you live in JQuery chains
 $.fn.patch = function (target) {
     IncrementalDOM.patch(target.get(0), dom2idom, this.get(0))
     return this
