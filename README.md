@@ -3,7 +3,7 @@
 ##### DISCLAIMER
 This came out of curiosity, it's a very inefficient way to use IncrementalDOM, and should absolutely not be your pick for new projects.
 
-In old existing codebases that you need to put your hands on, it may help you take advantage of in place mutations and refactor stuff a bit with a more declarative style without modifing your UI DOM generation. For such codebases it comes as a relatively lightweight dependecy (IncrementalDOM is < 10Kb).
+In old existing codebases that you need to put your hands on, it may help you take advantage of in place mutations and refactor things in a bit more declarative style without modifing your UI DOM generation. For such codebases it comes as a relatively lightweight dependecy (IncrementalDOM is < 10Kb).
 
 ##### live demos
 [circles](http://paolocaminiti.github.io/dom2idom/demo/circles/), benchmark to get a measure of inefficiency
