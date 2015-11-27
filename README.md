@@ -4,7 +4,7 @@
 TODO what and why
 
 ##### live demos
-[circles](http://paolocaminiti.github.io/dom2idom/demo/circles/), benchmark to get a measure inefficiency
+[circles](http://paolocaminiti.github.io/dom2idom/demo/circles/), benchmark to get a measure of inefficiency
 
 ##### Usage
 ```javascript
