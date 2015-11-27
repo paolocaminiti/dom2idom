@@ -1,0 +1,30 @@
+{
+  "name": "dom2idom",
+  "version": "0.1.0",
+  "description": "DOM fragment or HTML string to IncrementalDOM instructions runtime interpreter",
+  "main": "dom2idom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paolocaminiti/dom2idom.git"
+  },
+  "keywords": [
+    "IncremnetalDOM",
+    "DOM",
+    "fragmnet",
+    "HTML",
+    "jQuery",
+    "patch"
+  ],
+  "author": "Paolo Caminiti <paolo.caminiti@gmail.com> (https://github.com/paolocaminiti)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paolocaminiti/dom2idom/issues"
+  },
+  "homepage": "https://github.com/paolocaminiti/dom2idom#readme",
+  "dependencies": {
+    "incremental-dom": "git+https://github.com/paolocaminiti/incremental-dom.git"
+  }
+}

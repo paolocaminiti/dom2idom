@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circles Benchmark</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://underscorejs.org/underscore-min.js"></script>
+  <script src="https://fb.me/react-0.12.2.min.js"></script>
+</head>
+<body>
+  <p>
+    This is a fork of <a href="http://jsfiddle.net/jashkenas/CGSd5/" target="_top">jashkenas's Ember/Backbone</a> benchmark. Note that this is just a simple benchmark: you wouldn't be doing this in an actual app.
+  </p>
+  <p><strong>DISCLAIMER: This is a very inefficient approach, the only purpose of this benchmark is to figure out how much time is getting wasted by patching with dom2idom.</strong></p>
+
+  <input type="text" placeholder="how many" value='1000' oninput="setN(this)">
+
+  <!--<button onclick="runReact()">React</button>-->
+  <button onclick="runRawdog()">Vanilla</button>
+  <!--<button onclick="runIncDOM()">IncrementalDOM hand coded</button>-->
+  <button onclick="runVanillaFragDom2idom()">Vanilla in fragment > dom2idom</button>
+  <button onclick="runVanillaStringInnerHTML()">Vanilla to string > innerHTML</button>
+  <button onclick="runVanillaStringDom2idom()">Vanilla to string > dom2idom</button>
+  <button onclick="runjQueryDom2idom()">jQuery > dom2idom</button>
+
+  <p id="timing">&nbsp;</p>
+  <div id="grid"></div>
+
+  <script src="../../node_modules/incremental-dom/dist/incremental-dom-min.js"></script>
+  <script src="../../dom2idom.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
