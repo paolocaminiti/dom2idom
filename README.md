@@ -1,14 +1,9 @@
-# dom2idom
+### In place DOM to DOM mutations, via IncrementalDOM.
 
 ##### DISCLAIMER
 This came out of curiosity, it's a very inefficient way to use IncrementalDOM, and should absolutely not be your pick for new projects.
 
 In old existing codebases that you need to put your hands on, it may help you take advantage of in place mutations and refactor stuff a bit with a more declarative style without modifing your UI DOM generation. For such codebases it comes as a relatively lightweight dependecy (IncrementalDOM is < 10Kb).
-
-##### What is this?
-This little utility allows in place DOM to DOM mutations.
-
-It will take an HTML string, a DOM fragment, or an equivalent plain object, and execute it as [IncrementalDOM](https://github.com/google/incremental-dom) instructions.
 
 ##### live demos
 [circles](http://paolocaminiti.github.io/dom2idom/demo/circles/), benchmark to get a measure of inefficiency
@@ -32,7 +27,18 @@ Element.prototype.patch = function (frag) {
 }
 ```
 
-##### Utils
-[dom2domobj](https://gist.github.com/paolocaminiti/5a169ea7b42dcf947912)
+##### How does it work?
+It will take an HTML string, a DOM fragment, or an equivalent plain object, and execute it as [IncrementalDOM](https://github.com/google/incremental-dom) instructions.
 
-[jsonml2domobj](https://gist.github.com/paolocaminiti/74fcd11b9da29a73c240)
+In the circles demo you can clearly see the difference between replacing the innerHTML and patching it, from the devtools Elements tab.
+
+Mutating the DOM in place means it's current elements instances will be respected, this is of great advantage when updating your UI.
+
+Although not of great help with static content, you can optionally assign elements a key or declare that their descendants should be skipped by assigning attributes to you static DOM fragment *\<div _key="unique" _skip="true"\>*, you can change the attrs name in the code. For more on keys and skip usage refere to the [IncrementalDOM documentation](http://google.github.io/incremental-dom/#about).
+
+##### DOM equivalent plain object?
+An object with the exact same properties as the DOM interface, this gives you serialized DOM without string parsers. You can find two little gists here:
+
+[dom2domobj](https://gist.github.com/paolocaminiti/5a169ea7b42dcf947912), from DOM fragment or HTML string.
+
+[jsonml2domobj](https://gist.github.com/paolocaminiti/74fcd11b9da29a73c240), from JSOML.
