@@ -32,7 +32,7 @@ It will take an HTML string, a DOM fragment, or an equivalent plain object, and 
 
 In the circles demo you can clearly see the difference between replacing the innerHTML and patching it, from the devtools Elements tab.
 
-Mutating the DOM in place means it's current elements instances will be respected, this is of great advantage when updating your UI.
+Mutating the DOM in place means its current elements instances will be respected, this is of great advantage when updating your UI.
 
 Although not of great help with static content, you can optionally assign elements a key or declare that their descendants should be skipped by assigning attributes to you static DOM fragment *\<div _key="unique" _skip="true"\>*, you can change the attrs name in the code. For more on keys and skip usage refere to the [IncrementalDOM documentation](http://google.github.io/incremental-dom/#about).
 
