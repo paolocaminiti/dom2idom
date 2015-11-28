@@ -28,7 +28,7 @@ Element.prototype.patch = function (frag) {
 ```
 
 ##### How does it work?
-It will take an HTML string, a DOM fragment, or an equivalent plain object, and execute it as [IncrementalDOM](https://github.com/google/incremental-dom) instructions.
+It will take an HTML string, a DOM fragment, or an equivalent plain object, and execute its equivalent  [IncrementalDOM](https://github.com/google/incremental-dom) instructions.
 
 In the circles demo you can clearly see the difference between replacing the innerHTML and patching it, from the devtools Elements tab.
 
