@@ -34,10 +34,10 @@ In the circles demo you can clearly see the difference between replacing the inn
 
 Mutating the DOM in place means its current elements instances will be respected, this is of great advantage when updating your UI.
 
-Although not of great help with static content, you can optionally assign elements a key or declare that their descendants should be skipped by assigning attributes to you static DOM fragment *\<div _key="unique" _skip="true"\>*, you can change the attrs name in the code. For more on keys and skip usage refere to the [Incremental DOM documentation](http://google.github.io/incremental-dom/#about).
+Although not of great help with static content, you can optionally assign elements a key or declare that their descendants should be skipped by assigning attributes to you static DOM fragment *\<div key="unique" skip="true"\>*, you can change the attrs name in the code. For more on keys and skip usage refere to the [Incremental DOM documentation](http://google.github.io/incremental-dom/#about).
 
 ##### DOM equivalent plain object?
-An object with the exact same properties as the DOM interface, thus parsable just as real DOM. This gives you serialized DOM without string parsers. You can find two little gists here:
+An object with the exact same properties as the DOM interface, thus parsable just as real DOM. This gives you serialized cachable DOM without string parsers. You can find two little gists here:
 
 [dom2domobj](https://gist.github.com/paolocaminiti/5a169ea7b42dcf947912), from DOM fragment or HTML string.
 
