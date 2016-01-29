@@ -4,8 +4,8 @@ var dom2idom = (function () {
 	var skip = IncrementalDOM.skip
 	var text = IncrementalDOM.text
 
-	var KEY_ATTRIBUTE_NAME = '_key'
-	var SKIP_ATTRIBUTE_NAME = '_skip'
+	var KEY_ATTRIBUTE_NAME = 'key'
+	var SKIP_ATTRIBUTE_NAME = 'skip'
 
 	function asIDOM(frag) {
 		var childNodes = frag.childNodes
@@ -28,10 +28,8 @@ var dom2idom = (function () {
 
 						if (name === KEY_ATTRIBUTE_NAME) {
 							openArgs[1] = value
-							continue
 						} else if (name === SKIP_ATTRIBUTE_NAME) {
 							skip = true
-							continue
 						}
 
 						openArgs.push(name)
