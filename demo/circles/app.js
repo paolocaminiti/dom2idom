@@ -202,7 +202,7 @@ var reset = function() {
 	var BoxView = function(number){
 		this.el = document.createElement('div');
 		this.el.className = 'box-view';
-		this.el.setAttribute('_key', number)
+		this.el.setAttribute('key', number)
 		this.el.innerHTML = '<div class="box" id="box-' + number + '"></div>';
 		this.count = 0;
 		this.render();
@@ -331,7 +331,7 @@ var reset = function() {
 			var background = 'rgb(0,0,' + count % 255 + ')'
 			var style = 'top: ' + top + '; left: ' + left + '; background: ' + background + ';'
 
-			html.push('<div class="box-view" _key="' + i + '">\
+			html.push('<div class="box-view" key="' + i + '">\
 				<div class="box" id="box-' + i + '" style="' + style + '">\
 					' + textContent + '\
 				</div>\
@@ -392,14 +392,17 @@ $.fn.patch = function (target) {
 			var background = 'rgb(0,0,' + count % 255 + ')'
 			var style = 'top: ' + top + '; left: ' + left + '; background: ' + background + ';'
 
-			var $boxView = $('<div class="box-view"></div>')
+			var $boxView = $('<div></div>',	{
+ 				'class': 'box-view',
+				'key': i
+			})
 			var $box = $('<div></div>', {
-					'class': 'box',
-					'id': i,
-					'style': style
-				})
-				.text(textContent)
-			    .appendTo($boxView)
+				'class': 'box',
+				'id': i,
+				'style': style
+			})
+			.text(textContent)
+		    .appendTo($boxView)
 			$boxView.appendTo($root)
 		}
 		return $root
