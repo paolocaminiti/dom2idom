@@ -12,18 +12,18 @@ In old existing codebases that you need to put your hands on, it may help you ta
 ```javascript
 // Make yourself an helper
 function patch(target, frag) {
-	IncrementalDOM.patch(target, dom2idom, frag)
+  IncrementalDOM.patch(target, dom2idom, frag)
 }
 
 // If you live in JQuery chains
 $.fn.patch = function (target) {
-    IncrementalDOM.patch(target.get(0), dom2idom, this.get(0))
-    return this
+  IncrementalDOM.patch(target.get(0), dom2idom, this.get(0))
+  return this
 }
 
 // If you like the danger or are convinced this should be part of the standard
 Element.prototype.patch = function (frag) {
-	IncrementalDOM.patch(this, dom2idom, frag)
+  IncrementalDOM.patch(this, dom2idom, frag)
 }
 ```
 
