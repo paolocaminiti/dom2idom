@@ -1,6 +1,6 @@
 {
   "name": "dom2idom",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "DOM fragment or HTML string to IncrementalDOM instructions runtime interpreter",
   "main": "dom2idom.js",
   "scripts": {
