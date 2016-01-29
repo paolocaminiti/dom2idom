@@ -1,7 +1,7 @@
-### In place DOM to DOM mutations, via IncrementalDOM.
+### In place DOM to DOM mutations, via Incremental DOM.
 
 ##### DISCLAIMER
-This came out of curiosity, it's a very inefficient way to use IncrementalDOM, and should absolutely not be your pick for new projects.
+This came out of curiosity, it's a very inefficient way to use Incremental DOM, and should absolutely not be your pick for new projects.
 
 In old existing codebases that you need to put your hands on, it may help you take advantage of in place mutations and refactor things in a bit more declarative style without modifing your UI DOM generation. For such codebases it comes as a relatively lightweight dependecy (IncrementalDOM is < 10Kb).
 
@@ -28,13 +28,13 @@ Element.prototype.patch = function (frag) {
 ```
 
 ##### How does it work?
-It will take an HTML string, a DOM fragment, or an equivalent plain object, and execute its equivalent  [IncrementalDOM](https://github.com/google/incremental-dom) instructions.
+It will take an HTML string, a DOM fragment, or an equivalent plain object, and execute its equivalent  [Incremental DOM](https://github.com/google/incremental-dom) instructions.
 
 In the circles demo you can clearly see the difference between replacing the innerHTML and patching it, from the devtools Elements tab.
 
 Mutating the DOM in place means its current elements instances will be respected, this is of great advantage when updating your UI.
 
-Although not of great help with static content, you can optionally assign elements a key or declare that their descendants should be skipped by assigning attributes to you static DOM fragment *\<div _key="unique" _skip="true"\>*, you can change the attrs name in the code. For more on keys and skip usage refere to the [IncrementalDOM documentation](http://google.github.io/incremental-dom/#about).
+Although not of great help with static content, you can optionally assign elements a key or declare that their descendants should be skipped by assigning attributes to you static DOM fragment *\<div _key="unique" _skip="true"\>*, you can change the attrs name in the code. For more on keys and skip usage refere to the [Incremental DOM documentation](http://google.github.io/incremental-dom/#about).
 
 ##### DOM equivalent plain object?
 An object with the exact same properties as the DOM interface, thus parsable just as real DOM. This gives you serialized DOM without string parsers. You can find two little gists here:
